@@ -1,0 +1,12 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xlink = "http://www.w3.org/2000/xlink" width="0" height="0" viewBox="0 0 1920 1080" >
+    <g id="picture1"> 
+        <g stroke="green">
+            <circle cx="51%" cy="51%" r="10%" fill="transparent" stroke-width="3.4%" />
+            <line stroke="red" x1="0" y1="0" x2="43.3%" y2="43.3%" stroke-width="20" />
+            <line stroke="orange" x1="100%" y1="0%" x2="56.8%" y2="43.3%" stroke-width="15" />
+            <rect x="38.6%" y="28.7%" width="25%" height="45%" fill="transparent" stroke-width="4%"/>
+            <line stroke="yellow" x1="0%" y1="100%" x2="43.3%" y2="57.3%" stroke-width="10" />
+            <line stroke="blue" x1="100%" y1="100%" x2="56.8%" y2="56.8%" stroke-width="25" />
+        </g>
+    </g>
+</svg>
