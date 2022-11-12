@@ -7,13 +7,13 @@
         <path d="M 10 42 H 40 L 60 57 H 75 L 50 78 H 30 L 12 59 V 40" stroke-width="4"/>
     </g> 
 
+    <path d="M 50 80 V 90 L 40 100 V 90 H 50" fill="orange" stroke="#cc5526" />
+    <path d="M 30 80 V 90 L 20 100 V 90 H 30" fill="orange" stroke="#cc5526" />
+
     <path d="M 0 15 H 30 V 25 L 10 40 V 60 L 30 80 H 50 L 80 55 H 60 L 40 40 H 25
     L 40 30 V 10 L 30 0 H 16 L 10 10 Z" fill="transparent" stroke="royalBlue"/>
     <path d="M 20 50 L 30 70 H 50 V 60 " fill="transparent" stroke="royalBlue" />
 
     <path d="M 0 15 L 10 10 L 20 15 Z" fill="orange" stroke= "#cc5526" />
     <circle cx="20" cy="5" r="1" fill="#cc5526" />
-
-    <path d="M 50 80 V 90 L 40 100 V 90 H 50" fill="orange" stroke="#cc5526" />
-    <path d="M 30 80 V 90 L 20 100 V 90 H 30" fill="orange" stroke="#cc5526" />
 </svg>
