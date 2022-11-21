@@ -1,18 +1,32 @@
 <svg xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:svg="http://www.w3.org/2000/svg"
 xmlns="http://www.w3.org/2000/svg"
-width="100%" height="100%" viewBox="0 0 100% 100%">
+width="0" height="0" viewBox="0 0 1000 1000">
     <defs>
         <symbol id="simvol">
             <path d="M10 50L100 90" fill="transparent" stroke="black" stroke-width="4" />
         </symbol>
+        <symbol id="sm2">
+            <path d="M10 300 L 40 200 L 100 400" fill="transparent" stroke="blue" stroke-width="5"/>
+        </symbol>
     </defs>
+    <style>
+        .main { font-weight: bold}
+    </style>
     <g>
         <use xlink:href="#simvol" x="10%" stroke-linecap="butt"/>
-        <text x="13.6%" y="80%" style="font-weight: bold;">"butt"</text>
+        <text x="13.6%" y="15%" class="main">"butt"</text>
         <use xlink:href="#simvol" x="40%" stroke-linecap="round"/>
-        <text x="43.6%" y="80%" style="font-weight: bold;">"round"</text>
+        <text x="43.6%" y="15%" class="main">"round"</text>
         <use xlink:href="#simvol" x="70%" stroke-linecap="square"/>
-        <text x="73.6%" y="80%" style="font-weight: bold;">"square"</text>
+        <text x="73.6%" y="15%" class="main">"square"</text>
     </g>
+        <use xlink:href="#sm2" x="10%" stroke-linejoin="miter"/>
+        <text x="12%" y="45%" class="main">"miter"</text>
+        <use xlink:href="#sm2" x="32%" stroke-linejoin="inherit"/>
+        <text x="34%" y="45%" class="main">"inherit"</text>
+        <use xlink:href="#sm2" x="54%" stroke-linejoin="bevel"/>
+        <text x="56%" y="45%" class="main">"bevel"</text>
+        <use xlink:href="#sm2" x="75%" stroke-linejoin="round"/>
+        <text x="77%" y="45%" class="main">"round"</text>
 </svg>
