@@ -1,0 +1,29 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:svg="http://www.w3.org/2000/svg"
+xmlns="http://www.w3.org/2000/svg"
+width="100%" height="100%" viewBox="0 0 1000 1000">
+    <defs>
+        <symbol id="zemlya">
+            <line x1="0" x2="1000" y1="900" y2="900" stroke="green" stroke-width="400" />
+        </symbol>
+        <symbol id="krug">
+            <ellipse cx="40%" cy="40%" rx="6%" ry="3%" fill="red" />
+        </symbol>
+        <symbol id="centr">
+            <circle cx="50%" cy="40%" r="4%" fill="yellow" stroke="black" stroke-width="3" />
+        </symbol>
+    </defs>
+    <use xlink:href="#zemlya" height="710" transform="translate(1205 400) rotate(90)"/>
+    <use xlink:href="#centr" x="0" y="0"/>
+    <use xlink:href="#krug" x="0" y="0"/>
+    <use xlink:href="#krug" x="200" y="0"/>
+    <use xlink:href="#zemlya"/>
+    <g>
+        <use xlink:href="#krug" transform="translate(575 -95) rotate(45)"/>
+        <use xlink:href="#krug" transform="translate(430 -240) rotate(45)"/>
+        <use xlink:href="#krug" transform="translate(5 330) rotate(-45)"/>
+        <use xlink:href="#krug" transform="translate(-138 470) rotate(-45)"/>
+        <use xlink:href="#krug" transform="translate(900 101) rotate(90)"/>
+        <use xlink:href="#krug" transform="translate(900 -101) rotate(90)"/>
+    </g>
+</svg>
