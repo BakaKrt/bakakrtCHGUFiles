@@ -1,0 +1,20 @@
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" >
+    <text fill="black" font-family="Verdana" font-size="40">
+        <tspan fill="beige" x="20" y="300" rotate="5 -10 2 9 -35 90 1" font-family="cursive" stroke="aqua" stroke-width="0.2" 
+        >Ярдыков</tspan>
+        <tspan fill="blue" x="20" y="340" rotate="-5" font-family= "monospace" stroke="aqua" stroke-width="0.2" stroke-dasharray="12% 22%"
+        >Э</tspan>
+        <tspan fill="blue" x="40" y="340" rotate="10" font-family= "monospace" stroke="red" stroke-width="0.2" stroke-dasharray="12% 12% 75 1%"
+        >д</tspan>
+        <tspan fill="blue" x="60" y="340" rotate="12" font-family= "monospace" stroke="#64085d" stroke-width="1" stroke-dasharray="22% 12%"
+        >у</tspan>
+        <tspan fill="blue" x="80" y="340" rotate="-9" font-family= "monospace" stroke="yellow" stroke-width="0.2" stroke-dasharray="12% 22% 45%"
+        >а</tspan>
+        <tspan fill="blue" x="100" y="340" rotate="15" font-family= "monospace" stroke="brown" stroke-width="0.2" stroke-dasharray="3% 62% 55% 42%"
+        >р</tspan>
+        <tspan fill="blue" x="120" y="340" rotate="40" font-family= "monospace" stroke="purple" stroke-width="0.7" stroke-dasharray="12% 22% 45%"
+        >д</tspan>
+        <tspan fill="yellow" x="20" y="380" rotate="340 0 22 0 35 10 12 -1 32 -9" font-family="fantasy"
+        >Евгеньевич</tspan>
+    </text>
+</svg>
