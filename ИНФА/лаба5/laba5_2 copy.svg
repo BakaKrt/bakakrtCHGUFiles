@@ -1,0 +1,24 @@
+<svg viewBox="0 0 2000 2000"
+ xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <defs>
+        <path id="MyPath"
+        d="m 0 0 V 500 H 500 V 1000 H 1000 V 100 H 1500" /> 
+    </defs>
+    <use xlink:href="#MyPath" fill="none" stroke="blue" />
+    <text font-family="Verdana" font-size="57" >
+        <textPath xlink:href="#MyPath">
+            <tspan dy="-45" alignment-baseline="middle" fill="red" baseline-shift="baseline" >
+            Вот здесь лежит больной студент;
+            </tspan>
+            <tspan dy="-60" fill="aquamarine" alignment-baseline="text-before-edge" > 
+            Его судьба неумолима.
+            </tspan>
+            <tspan dy="0" fill="#f312bb" alignment-baseline="hanging" >
+            Несите прочь медикамент:
+            </tspan>
+            <tspan dy="70" fill="#ffffff" alignment-baseline="middle" baseline-shift="super" >
+            Болезнь любви неизлечима!
+            </tspan>
+        </textPath>
+    </text>
+</svg>
