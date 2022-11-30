@@ -29,6 +29,7 @@ int main ( )
 // Обработать один символ цифры 10-ичной системы
 		InputString[i++] = ch; //формируем строку
 // символ преобразуем в число
+		if (strlen(InputString)>Len) cout << "\nПроизошло переполнение, часть символов будет потеряна";
 		if (ch>='0' && ch<='9') zifra=ch-48;
 // Число умножить на основание системы счисления
 // и прибавить значение цифры (схема Горнера)
@@ -54,19 +55,19 @@ int main ( )
 	chislo = abs(chislo);
 // Цифры числа получаем, начиная с младшего разряда
 	i=0;
-		do {
+	do {
 // Остаток от деления есть очередная цифра
-	ostatok = chislo%10;
+		ostatok = chislo%10;
 // Частное есть следующее число
-	chislo = chislo/10;
+		chislo = chislo/10;
 // Формируем выходную строку:
 // полученную цифру преобразуем к соответствующему
-// ASCII-коду символа 16й системы счисления
-	if (ostatok<=9) OutputString[i++] = ostatok+48;
-	else OutputString[i++] = ostatok+55;
+// ASCII-коду символа 10й системы счисления
+		if (ostatok<=9) OutputString[i++] = ostatok+48;
+		else OutputString[i++] = ostatok+55;
 // контрольный вывод
-	cout << "\n\tочередная цифра - " << ostatok
-	<< ", число - " << OutputString;
+		cout << "\n\tочередная цифра - " << ostatok
+		<< ", число - " << OutputString;
 	}
 	while (chislo!=0);
 // Добавим знак
@@ -78,6 +79,6 @@ int main ( )
 		OutputString[strlen(OutputString)-1-i]=ch;
 	}
 // Вывод результата второй части
-	cout << "\nНа выходе строка: " << OutputString;
+	cout << "\nНа выходе строка: " << OutputString << "\nМаксимальная длина входной строки = "<<Len;
 	return 0;
 }
