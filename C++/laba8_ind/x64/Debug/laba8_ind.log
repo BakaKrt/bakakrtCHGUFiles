@@ -1,0 +1,4 @@
+﻿  laba8_ind.cpp
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_ind\laba8_ind.cpp(53,12): warning C4477: "printf": в строке форматирования "%u" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "unsigned __int64"
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_ind\laba8_ind.cpp(53,12): message : рекомендуется использовать "%zu" в строке форматирования
+  laba8_ind.vcxproj -> C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_ind\x64\Debug\laba8_ind.exe
