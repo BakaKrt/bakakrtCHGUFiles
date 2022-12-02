@@ -1,0 +1,5 @@
+﻿  laba8_v1.2.cpp
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_v1.2\laba8_v1.2.cpp(25,12): warning C4477: "printf": в строке форматирования "%u" требуется аргумент типа "unsigned int", но вариативный аргумент "2" имеет тип "unsigned __int64"
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_v1.2\laba8_v1.2.cpp(25,12): message : рекомендуется использовать "%zu" в строке форматирования
+  LINK : не найден или не выполнена сборка C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_v1.2\x64\Debug\laba8_v1.2.exe при последней инкрементной компоновке; выполняется полная компоновка
+  laba8_v1.2.vcxproj -> C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_v1.2\x64\Debug\laba8_v1.2.exe

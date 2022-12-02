@@ -1,8 +1,11 @@
 #include <iostream>
 #include <cstring>
+#include <cmath>
+
 using namespace std;
 int main ( )
 {
+	setlocale(0, "");
 	bool minus = false, is10Digit;
 	char ch;
 	long long chislo = 0;
