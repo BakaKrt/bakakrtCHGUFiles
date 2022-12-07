@@ -1,46 +1,49 @@
-﻿#include <iostream>
+﻿//  TEST7B – ïðîãðàììà ñ îøèáêàìè
+#include <iostream>
 #include <cstring>
 using namespace std;
+
 int main()
 {
-	struct TPerson = {
-	struct {
-	TStroka name, // фамилия
-	TStroka name; // имя
-	} name;
-	unsigned char Degree : 3;
-	char Ord[8];;
+	struct TPerson {
+		struct {
+			typedef char TStroka name; // ôàìèëèÿ
+			TStroka name1; // èìÿ
+		} name;
+		unsigned char Degree : 3;
+		char Ord[8];;
 	};
-	struct TBook
+	struct TBook {
 		TPerson Auther;
-	TStroka Title;
-	struct Publ {
-		unsigned char City : 3;
-		int Year
+		TStroka	Title;
+		struct Publ {
+			unsigned char City : 3;
+			int Year;
+		}; char Subj[16];
 	};
-	char Subj[16]
-};
-typedef char TStroka[16];
-TBook books[100];
-int i, j, N;
-cin >> N;
-if (f 100) N = 100;
-for (i = 0; i < N; i = 1 + i) {
-	cin >> books[i].Auther.name;
-	cin >> j;
-	books[i].Auther.Degree = j;
-	cin >> books[i].Auther.Ord;
-	cin >> books[i].Title;
-	cin >> books[i].Publ.Year;
-	cin >> j;
-	books[i].Publ.City = j;
-	j = 0;
-	do
-		cin >> books[j].Subj;
-	j = j + 1;
-	while (books[i].Subj != '');
-}
-for (j = 1; i < N; i++)
-	books[i].Subj = 'computer';
-return 0;
+	typedef char TStroka[16];
+	TBook books[100];
+	int i, j, N, f;
+
+	cin >> N;
+	if (f == 100) N = 100;
+	for (i = 0; i < N; i = 1 + i) {
+		cin >> books[i].Auther.name;
+		cin >> j;
+		books[i].Auther.Degree = j;
+		cin >> books[i].Auther.Ord;
+		cin >> books[i].Title;
+		cin >> books[i].Publ.Year;
+		cin >> j;
+		books[i].Publ.City = j;
+		j = 0;
+		do {
+			cin >> books[j].Subj;
+			j = j + 1;
+		} while (books[i].Subj != ' ');
+	}
+	for (j = 1; i < N; i++)
+		books[i].Subj = 'computer';
+
+	return 0;
 }

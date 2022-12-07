@@ -1,0 +1,6 @@
+﻿  laba8_vladimir.cpp
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_vladimir\laba8_vladimir.cpp(215,35): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_vladimir\laba8_vladimir.cpp(216,41): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_vladimir\laba8_vladimir.cpp(223,39): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_vladimir\laba8_vladimir.cpp(224,47): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  laba8_vladimir.vcxproj -> C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\laba8_vladimir\x64\Debug\laba8_vladimir.exe
