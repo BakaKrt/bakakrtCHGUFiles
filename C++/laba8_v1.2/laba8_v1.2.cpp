@@ -214,12 +214,13 @@ int main(int argc, char* argv[])   //...и сама функция main
     char CHOOSE;
     string inp;
     setlocale(0, "");
-    if (argc != 1) {
+    cout << "Получать ввод с клавиатуры[0] или использовать аргументы из консоли[1]? ";
+    cin >> CHOOSE;
+    if (argc != 1 && argc<8) {
+        cout << argc << endl;
         for (int i = 1; i < argc; i++)
             printf("%d %s\n", i, argv[i]);
-        cout << "Получать ввод с клавиатуры[0] или использовать аргументы из консоли[1]? ";
-        cin >> CHOOSE;
-        system("cls"); //очистка cmd
+        //system("cls"); //очистка cmd
         printf("\nВаш выбор - %c\n\n", CHOOSE);
 
         in_bool = argv[1];
