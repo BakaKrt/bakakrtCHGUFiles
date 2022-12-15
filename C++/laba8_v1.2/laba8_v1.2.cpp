@@ -8,9 +8,9 @@ ofstream fout;
 ifstream fin;
 string in_bool;
 string fname1, fname2,FOUT1, FOUT2;    //для имен файлов
-
-char symbol_A, symbol_B, IN_OUT;     //Символы для замены - А(первый) и В(второй)
-
+string symbol_A, symbol_B;
+//char symbol_A, symbol_B, IN_OUT;     //Символы для замены - А(первый) и В(второй)
+char IN_OUT;
 const int KEY_ESC = 27;            //постоянаая ascii кода клавиши ESC
 
 char ch, want, trigger;            //рабочие переменные
@@ -90,17 +90,17 @@ bool CheckContinue()
 }
 */
 
-void CREATE_FILE_(char X)
+void CREATE_FILE_(bool X)
 {
 
     setlocale(0, "");
-    if (X == '0') {
+    if (X == 0) {
         cout << "Создать новый файл или использовать уже существующий?(New/Exist): ";
         cin >> in_bool;
     }
     if (in_bool == "N")
     {
-        if (X == '0'){
+        if (X == 0){
             printf("Введите название выходного файла: ");
             cin >> fname1;
         }
@@ -125,7 +125,7 @@ void CREATE_FILE_(char X)
         }
     }
     else {
-        if (X == '0') {
+        if (X == 0) {
             printf("Введите название входного файла: ");
             cin >> fname1;
         }
@@ -147,20 +147,22 @@ void CREATE_FILE_(char X)
 
 
 
-void EnterSymbol_AB(char X)  //Функция для задания 1 & 2 символа
+void EnterSymbol_AB(bool X)  //Функция для задания 1 & 2 символа
 {
-    if (X == '0') {
+    if (X == 0) {
         cout << "Введите символы А и В, которые будут друг друга заменять:\n";
         cin >> symbol_A;
         cin >> symbol_B;
         cin.clear();
-        printf("Ваши символы для замены: %c и %c\n", symbol_A, symbol_B);
+        printf("Ваши символы для замены: %c и %c\n", symbol_A.c_str(), symbol_B.c_str());
     }
+    cout << "Это А и В: " << symbol_A << symbol_B << endl;
+    //return symbol_A, symbol_B;
 }
 
-void EnterName2(char X)     //Аналогичная предыдущей функция для второго файла
+void EnterName2(bool X)     //Аналогичная предыдущей функция для второго файла
 {
-    if (X == '0')
+    if (X == 0)
     {
         cout << "Введите имя выходного файла (так же дополнится до .txt): ";
         cin.clear();
@@ -194,12 +196,17 @@ void OpenInput()      //Функция открывающая файл для ч
 void CreateOutput()
 {
     char ch;
+    symbol_A = symbol_A.c_str();
+    char *csymbol_A = &symbol_A[0];
+    symbol_B = symbol_B.c_str();
+    char *csymbol_B = &symbol_B[0];
+    cout << "C символы: "<<*csymbol_A << *csymbol_B;
     while (!fin.eof()) {
         fin.get(ch);
-        if (ch == symbol_A) {
+        if (ch == *csymbol_A) {
             fout.put(ch);
             fin.get(ch);
-            fout.put(symbol_B);
+            fout.put(*csymbol_B);
             symbol_A, symbol_B = symbol_B, symbol_A;
         }
         else
@@ -208,8 +215,8 @@ void CreateOutput()
 }
 
 
-
-int main(int argc, char* argv[])   //...и сама функция main
+/*
+int main(int argc, char* argv[])
 {
     char CHOOSE;
     string inp;
@@ -243,6 +250,70 @@ int main(int argc, char* argv[])   //...и сама функция main
     fout.close();
 
     if (CHOOSE == '0') {
+        cout << "\nВывод содержимого файлов:\nИспользовать консоль (0) или Notepad(1)? ";
+        cin >> inp;
+    };
+    if (inp == "0")
+    {
+        inp = "type ";
+    }
+    else inp = "notepad ";
+    string type1 = inp + fname1;
+    string type2 = inp + fname2;
+    system("color 3");
+    cout << "\n************ВХОД*************";
+    system(type1.c_str());
+    cout << "*********КОНЕЦ ВХОДА*********\n";
+    cout << "\n************ВЫВОД************";
+    system(type2.c_str());
+    cout << "*********КОНЕЦ ВЫВОДА********\n";
+    cout << "\nЗадание:\n\tЗамена в тексте каждого символа, "
+        << "стоящего после заданного символа, другим заданным символом, "
+        << "причем после каждой замены замененный символ становится искомым, а искомый – заменяющим.";
+    return 0;
+}*/
+
+
+int main(int argc, char* argv[])
+{
+    bool CHOOSE;
+    string inp;
+    setlocale(0, "");
+    cout << "Получать ввод с клавиатуры[0] или использовать аргументы из консоли[1]? ";
+    cin >> CHOOSE;
+    //cout << argc << endl;
+    for (int i = 1; i < argc; i++)
+        printf("%d %s\n", i, argv[i]);
+    //system("cls"); //очистка cmd
+    printf("\nВаш выбор - %d\n\n", CHOOSE);
+    if (argc > 2 && CHOOSE == 1)
+    {
+        in_bool = argv[1];
+        fname1 = argv[2];
+    }
+    CREATE_FILE_(CHOOSE);
+    if (CHOOSE == 1 && argc > 4) {
+        symbol_A = argv[3];
+        symbol_B = argv[4];
+        //symbol_A = argv[3];
+        //symbol_B = argv[4];
+        printf("Символы A и B: %s, %s", symbol_A.c_str(), symbol_B.c_str());
+        //symbol_A = symbol_A;
+        cout << "\nСимвол А внутри цикла: " << symbol_A << endl;
+    }
+    cout << "А и B: " << symbol_A << symbol_B << endl;
+    printf("Символы A и B: %s, %s", symbol_A.c_str(), symbol_B.c_str());
+    EnterSymbol_AB(CHOOSE);
+    if (argc > 5 && CHOOSE) fname2 = argv[5];
+    EnterName2(CHOOSE);
+    if (argc > 6 && CHOOSE ) inp = argv[6];
+    
+    OpenInput();
+    CreateOutput();
+    fin.close();
+    fout.close();
+
+    if (CHOOSE == 0) {
         cout << "\nВывод содержимого файлов:\nИспользовать консоль (0) или Notepad(1)? ";
         cin >> inp;
     };

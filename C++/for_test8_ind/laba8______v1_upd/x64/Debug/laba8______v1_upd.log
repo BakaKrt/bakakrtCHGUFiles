@@ -1,0 +1,13 @@
+﻿  laba8______v1_upd.cpp
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\for_test8_ind\laba8______v1_upd\laba8______v1_upd.cpp(47,8): warning C4311: <function-style-cast>: усечение указателя из "const _Elem *" в "int"
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\for_test8_ind\laba8______v1_upd\laba8______v1_upd.cpp(47,8): warning C4302: <function-style-cast>: усечение из "const _Elem *" к "int"
+          with
+          [
+              _Elem=char
+          ]
+C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\for_test8_ind\laba8______v1_upd\laba8______v1_upd.cpp(42,10): warning C4101: want: неиспользованная локальная переменная
+  laba8______v1_upd.vcxproj -> C:\Users\Baka\Documents\GitHub\bakakrtCHGUFiles\C++\for_test8_ind\laba8______v1_upd\x64\Debug\laba8______v1_upd.exe
