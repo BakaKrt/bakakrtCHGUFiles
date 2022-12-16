@@ -10,7 +10,6 @@ string in_bool;
 string fname1, fname2,FOUT1, FOUT2;    //для имен файлов
 string symbol_A, symbol_B; 
 char IN_OUT;
-const int KEY_ESC = 27;            //постоянаая ascii кода клавиши ESC
 
 char ch, want, trigger;            //рабочие переменные
 string str;
@@ -196,21 +195,19 @@ int main(int argc, char* argv[])
         symbol_A = argv[3];
         symbol_B = argv[4];
         printf("Символы A и B: %s, %s", symbol_A.c_str(), symbol_B.c_str());
-        cout << "\nСимвол А внутри цикла: " << symbol_A << endl;
     }
     EnterSymbol_AB(CHOOSE);
     if (argc > 5 && CHOOSE) fname2 = argv[5];
     EnterName2(CHOOSE);
     if (argc > 6 && CHOOSE ) inp = argv[6];
-    
     OpenInput();
     CreateOutput();
     fin.close();
     fout.close();
-    if (CHOOSE == 0) {
-        cout << "\nВывод содержимого файлов:\nИспользовать консоль (0) или Notepad(1)? ";
+    if (CHOOSE == 0 || inp.length()==0) {
+        cout << "\nВывод содержимого файлов:\nИспользовать консоль [0] или Notepad[1]? ";
         cin >> inp;
-    };
+    }
     if (inp == "0")
     {
         inp = "type ";
